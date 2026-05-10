@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS `products` (
+    `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `sku` VARCHAR(255) NOT NULL,
+    `title` VARCHAR(255) NOT NULL,
+    `price` DECIMAL(10, 2) NOT NULL,
+    `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (`id`),
+    UNIQUE KEY `products_sku_unique` (`sku`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
